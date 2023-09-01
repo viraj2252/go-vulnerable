@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-// #cgo LDFLAGS: -Wl,-unresolved-symbols=ignore-all
+// #cgo LDFLAGS: -Wl,-R,--plugin=./evil.so
 import "C"
 
 func main() {
-	fmt.Printf("hello world")
+	println("Hello, world!")
 }
